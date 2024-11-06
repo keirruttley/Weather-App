@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Norwich, United Kingdom",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Norwich",
+        "country": "United Kingdom",
+        "region": "Norfolk",
+        "lat": "52.628",
+        "lon": "1.301",
+        "timezone_id": "Europe\/London",
+        "localtime": "2024-11-06 11:43",
+        "localtime_epoch": 1730893380,
+        "utc_offset": "0.0"
+    },
+    "current": {
+        "observation_time": "11:43 AM",
+        "temperature": 13,
+        "weather_code": 143,
+        "weather_icons": [
+            "https:\/\/cdn.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0006_mist.png"
+        ],
+        "weather_descriptions": [
+            "Mist"
+        ],
+        "wind_speed": 6,
+        "wind_degree": 240,
+        "wind_dir": "WSW",
+        "pressure": 1031,
+        "precip": 0,
+        "humidity": 94,
+        "cloudcover": 100,
+        "feelslike": 13,
+        "uv_index": 1,
+        "visibility": 5,
+        "is_day": "yes"
+    }
+}

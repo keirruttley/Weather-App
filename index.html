@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="js/script.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- humidity filter div -->
+  <div id="humidity-filter"></div>
+
+  <!-- leaf animation -->
+  <img class="leaf" src="assets/animated/autumn.png" />
+
+  <!-- main div taking up full page -->
+  <div id="main-div" class="container">
+    <!-- Temperature slider on left -->
+    <div id="left-panel" class="container flex-column">
+      <p>Temperature</p>
+
+      <!-- temperature slider -->
+      <div id="temperature-div">
+        <input id="temperature-slider" min="-10" max="50" type="range" class="vertical-slider" />
+      </div>
+
+      <p><span id="temperature-value"></span><span>ºC</span></p>
+    </div>
+
+    <!-- wind & humidity on right -->
+    <div id="right-panel" class="container flex-column">
+      <!-- wind -->
+      <div class="container flex-column">
+        <input id="wind-slider" type="range" min="0" max="32" class="horizontal-slider" />
+        <p><span id="wind-value"></span><span>km/h</span></p>
+      </div>
+
+      <!-- humidity -->
+      <div class="container flex-column">
+        <input id="humidity-slider" min="0" max="100" type="range" class="horizontal-slider" />
+        <p><span id="humidity-value"></span><span>%</span></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
