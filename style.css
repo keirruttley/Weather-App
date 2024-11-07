@@ -1,52 +1,132 @@
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .leaf {
-    position: absolute;
-    z-index: 2;
-    width: 100px;
-    animation: leafmovement 12s linear infinite;
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  animation: leafmovement 12s linear infinite;
+}
+
+.cloud {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  visibility: hidden;
+}
+
+.cloud-animation {
+  animation: cloudmovement 3s;
+}
+
+#wind-direction {
+  height: 100px;
+  width: 100px;
 }
 
 #main-div {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #humidity-filter {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 3;
-    background-color: blue;
-    opacity: 0.5;
+  position: absolute;
+  top: 51vh;
+  width: 100vw;
+  height: 50vh;
+  z-index: 3;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+#uv-index-filter {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  z-index: 3;
+  background-color: red;
+  opacity: 0.6;
+}
+
+#cloud1 {
+ top: 50vh;
+ left: 50vw;
+}
+#cloud2 {
+  top: 60vh;
+  left: 20vw;
+}
+#cloud3 {
+  top: 0vh;
+  left: 0vw;
+}
+#cloud4 {
+  top: 10vh;
+  left: 60vw;
+}
+#cloud5 {
+  top: 50vh;
+  left: 50vw;
+}
+#cloud5 {
+  top: 50vh;
+  left: 10vw;
+}
+#cloud6 {
+  top: 60vh;
+  left: 40vw;
+}
+#cloud7 {
+  top: 30vh;
+  left: 50vw;
+}
+#cloud8 {
+  top: 20vh;
+  left: 10vw;
+}
+#cloud9 {
+  top: 0vh;
+  left: 50vw;
+}
+#cloud10 {
+  top: 50vh;
+  left: 70vw;
+}
+
+@keyframes cloudmovement {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @keyframes leafmovement {
-    0% {
-      transform: translate(-100px, 0) rotate(0);
-    }
-    20% {
-      transform: translate(15vw, 10vh) rotate(85deg);
-    }
-    65% {
-      transform: translate(55vw, 12vh) rotate(550deg);
-    }
-    80% {
-      transform: translate(70vw, 17vh) rotate(740deg);
-    }
-    100% {
-      transform: translate(100vw, 25vh) rotate(920deg);
-    }
+  0% {
+    transform: translate(-100px, 0) rotate(0);
   }
+
+  20% {
+    transform: translate(15vw, 10vh) rotate(85deg);
+  }
+
+  65% {
+    transform: translate(55vw, 12vh) rotate(550deg);
+  }
+
+  80% {
+    transform: translate(70vw, 17vh) rotate(740deg);
+  }
+
+  100% {
+    transform: translate(100vw, 25vh) rotate(920deg);
+  }
+}

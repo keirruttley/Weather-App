@@ -32,9 +32,9 @@
         "pressure": 1031,
         "precip": 0,
         "humidity": 94,
-        "cloudcover": 100,
+        "cloudcover": 20,
         "feelslike": 13,
-        "uv_index": 1,
+        "uv_index": 100,
         "visibility": 5,
         "is_day": "yes"
     }
