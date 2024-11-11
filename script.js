@@ -1,3 +1,4 @@
+// API configuration
 const apiUrl = "/assets/data/test.json?";
 const urlParams = {
     query: "Norwich",
@@ -9,6 +10,7 @@ const humiditySlider = document.getElementById("humidity-slider");
 const windSlider = document.getElementById("wind-slider");
 const temperatureSlider = document.getElementById("temperature-slider");
 
+// wind direction display
 const windDirection = document.getElementById("wind-direction");
 
 //values
@@ -17,18 +19,20 @@ const humidityValue = document.getElementById("humidity-value");
 const windValue = document.getElementById("wind-value");
 const windDirectionValue = document.getElementById("wind-direction-value");
 
-//animations
+// leaf animation
 const leafAnimations = document.getElementsByClassName("leaf");
 
+// cloud animation
 const cloudsArray = document.getElementsByClassName("cloud");
 
-
-//filter
+// humidity filter
 const humidityFilter = document.getElementById("humidity-filter");
 
+// UV index filter
 const uvIndexFilter = document.getElementById("uv-index-filter");
 
 
+// fetches data from the API and updates UI elements accordingly
 async function fetchData() {
     try {
         // get reponse from api
@@ -42,7 +46,7 @@ async function fetchData() {
         // obtain json
         const json = await response.json();
 
-        // update functions
+        // update functions with fetched data
         updateHumidity(json.current.humidity);
         updateWind(json.current.wind_speed);
         updateTemperature(json.current.temperature);
@@ -51,13 +55,11 @@ async function fetchData() {
         updateCloudMovement(json.current.cloudcover);
         // const cloudCover = Math.random() * 100;
         // updateCloudMovement(cloudCover);
-
-        console.log(json);
-    } catch (error) {
-        console.error(error);
     }
 }
 
+// updates wind direct display
+// @param{number} newValue - new wind degree value
 function updateWindDirection(newValue) {
 
     windDirection.style.rotate = newValue + "deg";
@@ -66,12 +68,16 @@ function updateWindDirection(newValue) {
 
 }
 
+// Updates UV index filter opacity
+// @param{number} newValue - new UV index value
 function updateUvIndexFilter(newValue) {
 
     uvIndexFilter.style.opacity = (0.6 * Number(newValue)) / 100;
 
 }
 
+//  Updates humidity slider and display
+// @param{number} newValue - new humidity value
 function updateHumidity(newValue) {
 
     humiditySlider.value = newValue;
@@ -81,6 +87,8 @@ function updateHumidity(newValue) {
 
 }
 
+// Update wind slider and display
+// @param{number} newValue - New wind speed value
 function updateWind(newValue) {
 
     windSlider.value = newValue;
@@ -95,6 +103,8 @@ function updateWind(newValue) {
     }
 }
 
+// Updates cloud animation based on cloud cover percentage
+// @param{number} newValue - new cloud cover value
 function updateCloudMovement(newValue) {
     let cloudNumber = parseInt(Number(newValue) * 0.1)
 
@@ -114,6 +124,8 @@ function updateCloudMovement(newValue) {
     }
 }
 
+// Updates temperature slider and display
+// @param{number} newValue - New temperature value
 function updateTemperature(newValue) {
 
     temperatureSlider.value = newValue;
@@ -122,5 +134,5 @@ function updateTemperature(newValue) {
 }
 
 
-
+// set interval to fetch data every 2 seconds
 setInterval(fetchData, 2000);
