@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-  <title>Document</title>
+  <title>Weather App</title>
 </head>
 
 <body>
@@ -21,6 +21,7 @@
   <img class="leaf" src="assets/animated/leaf.png" />
 
   <!-- cloud animation -->
+   <div>
    <img id="cloud1"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
    <img id="cloud2"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
    <img id="cloud3"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
@@ -31,9 +32,12 @@
    <img id="cloud8"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
    <img id="cloud9"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
    <img id="cloud10"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+  </div>
 
   <!-- main div taking up full page -->
   <div id="main-div" class="container">
+<h1 id="title-style" class="flex-column">Weather App</h1>
+    <div id="weather-app-container" class="flex-column container justify-space around">
     <!-- Temperature slider on left -->
     <div id="left-panel" class="container flex-column">
 
@@ -67,7 +71,7 @@
         <p><span id="wind-direction-value"></span> Wind Direction</p>
     </div>
 
-
+  </div>
   </div>
 </body>
 

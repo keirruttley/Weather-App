@@ -1,5 +1,8 @@
+//for testing purposes use line below:
+const apiUrl = "/assets/data/test.json?"
+
 // API configuration
-const apiUrl = "/assets/data/test.json?";
+// const apiUrl = "https://api.weatherstack.com/current?";
 const urlParams = {
     query: "Norwich",
     access_key: "14e91d4bf3d7f9c1ad2f5670d7f6c204",
@@ -55,7 +58,11 @@ async function fetchData() {
         updateCloudMovement(json.current.cloudcover);
         // const cloudCover = Math.random() * 100;
         // updateCloudMovement(cloudCover);
-    }
+
+    } catch (error) {
+         console.error(error) 
+        //  alert("something went wrong, ask Kier for help")
+        }
 }
 
 // updates wind direct display

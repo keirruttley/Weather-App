@@ -8,6 +8,10 @@ body {
   align-items: center;
 }
 
+.justify-space-around{
+  justify-content: space-evenly;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -30,6 +34,13 @@ body {
   animation: cloudmovement 3s;
 }
 
+#title-style {
+  font-size: 40px;
+  color: #ffde00 ;
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
 #wind-direction {
   height: 100px;
   width: 200px;
@@ -38,6 +49,27 @@ body {
 #main-div {
   width: 100vw;
   height: 100vh;
+}
+
+#weather-app-container {
+    height: 400px;
+    width: 30vw;
+    margin-top: 10px;
+    position: relative;
+    border: solid 10px #cc0000;
+    background-color: aliceblue;
+}
+
+#temperature-slider::-webkit-slider-runnable-track {
+  background: linear-gradient(270deg,red, blue);
+  width: 120px;
+  height: 20px;
+}
+
+#temperature-slider::-moz-range-track  {
+  background: linear-gradient(270deg,red, blue);
+  width: 120px;
+  height: 20px;
 }
 
 #temperature-slider {

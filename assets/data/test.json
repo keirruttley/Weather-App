@@ -31,10 +31,10 @@
         "wind_dir": "WSW",
         "pressure": 1031,
         "precip": 0,
-        "humidity": 94,
+        "humidity": 0,
         "cloudcover": 100,
         "feelslike": 13,
-        "uv_index": 100,
+        "uv_index": 0,
         "visibility": 5,
         "is_day": "yes"
     }
