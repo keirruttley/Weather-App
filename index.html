@@ -21,57 +21,60 @@
   <img class="leaf" src="assets/animated/leaf.png" />
 
   <!-- cloud animation -->
-   <div>
-   <img id="cloud1"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
-   <img id="cloud2"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
-   <img id="cloud3"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
-   <img id="cloud4"  class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
-   <img id="cloud5"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
-   <img id="cloud6"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
-   <img id="cloud7"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
-   <img id="cloud8"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
-   <img id="cloud9"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
-   <img id="cloud10"  class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+  <div>
+    <img id="cloud1" class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
+    <img id="cloud2" class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
+    <img id="cloud3" class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
+    <img id="cloud4" class="cloud cloud-animation" src="/assets/animated/Cloud.png" />
+    <img id="cloud5" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+    <img id="cloud6" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+    <img id="cloud7" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+    <img id="cloud8" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+    <img id="cloud9" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
+    <img id="cloud10" class="cloud cloud-animation" src="/assets/animated/cloud.png" />
   </div>
 
   <!-- main div taking up full page -->
   <div id="main-div" class="container">
-<h1 id="title-style" class="flex-column">Weather App</h1>
-    <div id="weather-app-container" class="flex-column container justify-space around">
-    <!-- Temperature slider on left -->
-    <div id="left-panel" class="container flex-column">
 
-      <!-- temperature slider -->
-      <div id="temperature-div">
-        <input id="temperature-slider" min="-10" max="50" type="range" class="vertical-slider" />
+    <div id="weather-app-container" class="container flex-column space-evenly">
+
+      <h1 id="title-style">Weather App</h1>
+      <div class="container">
+        <!-- Temperature slider on left -->
+        <div class="container">
+
+          <!-- temperature slider -->
+          <div id="temperature-div">
+            <input id="temperature-slider" min="-10" max="50" type="range" class="vertical-slider" />
+          </div>
+          <p>Temperature</p>
+          <p><span id="temperature-value"></span><span>ºC</span></p>
+        </div>
+
+        <!-- wind & humidity on right -->
+        <div class="container">
+          <!-- wind -->
+          <div class="container flex-column">
+            <input id="wind-slider" type="range" min="0" max="32" class="horizontal-slider" />
+            <p><span id="wind-value"></span><span>km/h</span></p>
+          </div>
+
+          <!-- humidity -->
+          <div class="container flex-column">
+            <input id="humidity-slider" min="0" max="100" type="range" class="horizontal-slider" />
+            <p><span id="humidity-value"></span><span>%</span></p>
+          </div>
+        </div>
+
+
+        <!-- wind direction -->
+        <div class="container">
+          <img id="wind-direction" src="assets/images/arrow.png" alt="arrow changes direct to wind direction">
+          <p><span id="wind-direction-value"></span> Wind Direction</p>
+        </div>
       </div>
-      <p>Temperature</p>
-      <p><span id="temperature-value"></span><span>ºC</span></p>
     </div>
-
-    <!-- wind & humidity on right -->
-    <div id="right-panel" class="container flex-column">
-      <!-- wind -->
-      <div class="container flex-column">
-        <input id="wind-slider" type="range" min="0" max="32" class="horizontal-slider" />
-        <p><span id="wind-value"></span><span>km/h</span></p>
-      </div>
-
-      <!-- humidity -->
-      <div class="container flex-column">
-        <input id="humidity-slider" min="0" max="100" type="range" class="horizontal-slider" />
-        <p><span id="humidity-value"></span><span>%</span></p>
-      </div>
-    </div>
-
-
-    <!-- wind direction -->
-    <div class="container flex-column">
-      <img id="wind-direction" src="assets/images/arrow.png" alt="arrow changes direct to wind direction">
-        <p><span id="wind-direction-value"></span> Wind Direction</p>
-    </div>
-
-  </div>
   </div>
 </body>
 

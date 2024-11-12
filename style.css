@@ -8,12 +8,12 @@ body {
   align-items: center;
 }
 
-.justify-space-around{
-  justify-content: space-evenly;
-}
-
 .flex-column {
   flex-direction: column;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .leaf {
@@ -36,9 +36,9 @@ body {
 
 #title-style {
   font-size: 40px;
-  color: #ffde00 ;
+  color: #ffde00;
   text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 #wind-direction {
@@ -52,22 +52,21 @@ body {
 }
 
 #weather-app-container {
-    height: 400px;
-    width: 30vw;
-    margin-top: 10px;
-    position: relative;
-    border: solid 10px #cc0000;
-    background-color: aliceblue;
+  height: 400px;
+  width: 50vw;
+  position: relative;
+  border: solid 10px #cc0000;
+  background-color: aliceblue;
 }
 
 #temperature-slider::-webkit-slider-runnable-track {
-  background: linear-gradient(270deg,red, blue);
+  background: linear-gradient(270deg, red, blue);
   width: 120px;
   height: 20px;
 }
 
-#temperature-slider::-moz-range-track  {
-  background: linear-gradient(270deg,red, blue);
+#temperature-slider::-moz-range-track {
+  background: linear-gradient(270deg, red, blue);
   width: 120px;
   height: 20px;
 }
@@ -96,53 +95,68 @@ body {
 }
 
 #cloud1 {
- top: 50vh;
- left: 50vw;
+  top: 50vh;
+  left: 50vw;
 }
+
 #cloud2 {
   top: 60vh;
   left: 20vw;
 }
+
 #cloud3 {
   top: 0vh;
   left: 0vw;
 }
+
 #cloud4 {
   top: 10vh;
   left: 60vw;
 }
+
 #cloud5 {
   top: 50vh;
   left: 50vw;
 }
+
 #cloud5 {
   top: 50vh;
   left: 10vw;
 }
+
 #cloud6 {
   top: 60vh;
   left: 40vw;
 }
+
 #cloud7 {
   top: 30vh;
   left: 50vw;
 }
+
 #cloud8 {
   top: 20vh;
   left: 10vw;
 }
+
 #cloud9 {
   top: 0vh;
   left: 50vw;
 }
+
 #cloud10 {
   top: 50vh;
   left: 70vw;
 }
 
 @keyframes cloudmovement {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes leafmovement {
