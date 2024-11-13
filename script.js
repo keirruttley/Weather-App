@@ -61,7 +61,7 @@ async function fetchData() {
 
     } catch (error) {
          console.error(error) 
-        //  alert("something went wrong, ask Kier for help")
+        //  alert("something went wrong, ask Keir for help")
         }
 }
 
