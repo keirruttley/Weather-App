@@ -34,7 +34,7 @@
         "humidity": 0,
         "cloudcover": 100,
         "feelslike": 13,
-        "uv_index": 0,
+        "uv_index": 30,
         "visibility": 5,
         "is_day": "yes"
     }

@@ -71,16 +71,12 @@ function updateWindDirection(newValue) {
 
     windDirection.style.rotate = newValue + "deg";
     windDirectionValue.innerHTML = newValue;
-
-
 }
 
 // Updates UV index filter opacity
 // @param{number} newValue - new UV index value
 function updateUvIndexFilter(newValue) {
-
     uvIndexFilter.style.opacity = (0.6 * Number(newValue)) / 100;
-
 }
 
 //  Updates humidity slider and display
@@ -89,9 +85,7 @@ function updateHumidity(newValue) {
 
     humiditySlider.value = newValue;
     humidityValue.innerHTML = newValue;
-
     humidityFilter.style.opacity = (0.5 * Number(newValue)) / 100;
-
 }
 
 // Update wind slider and display
@@ -137,7 +131,6 @@ function updateTemperature(newValue) {
 
     temperatureSlider.value = newValue;
     temperatureValue.innerHTML = newValue;
-
 }
 
 
